@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Cormorant';
+    src: url(../fonts/Cormorant-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url(../fonts/Montserrat-Light.ttf) format('truetype');
+    font-style: normal;
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--montserrat-light-font);
+    font-size: 16px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.title{
+    font-family: var(--cormorant-font);
+    font-size: 36px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+:root{
+    --cormorant-font: Cormorant;
+    --montserrat-light-font: Montserrat-Light;
+    --montserrat-semi-bold-font: Montserrat-SemiBold;
+    --black: #292D32;
+}
+
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/* slider ---------------------------------------------------- */
+.slider{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+.slide{
+    position: relative;
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+}
+
+.slide .content{
+    position: absolute;
+    top: 35%;
+    left: 100px;
+}
+
+.slide .content h2{
+    font-family: var(--cormorant-font);
+    font-size: 70px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.slide .content h3{
+    font-family: var(--cormorant-font);
+    font-size: 40px;
+    font-weight: lighter;
+    /* text-transform: uppercase; */
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.slide .content p{
+    font-family: var(--montserrat-light-font);
+    font-size: 20px;
+    max-width: 600px;
+    margin-left: 100px;
+}
+
+.about-company-btn{
+    text-decoration: underline;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: var(--cormorant-font);
+}
+
+
+/* pattern -------------------------- */
+
+.pattern{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hello-content{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 170px;
+    align-items: center;
+}
+
+.hello-text p{
+    font-size: 20px;
+}
+
+.hello-text p:first-child{
+    margin-bottom: 40px;
+    margin-right: 150px;
+}
+
+.hello-text p:last-child{
+    margin-left: 150px;
+}

@@ -1,24 +1,13 @@
 <?php
 
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
-use App\Livewire\Settings\Profile;
+use App\Livewire\Header; // Добавьте импорт для Livewire компонента Header
+use App\Livewire\MainPage; // Добавьте импорт для Livewire компонента MainPage
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('main.main-page-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
+})->name('main-page-nl');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
-Route::middleware(['auth'])->group(function () {
-    Route::redirect('settings', 'settings/profile');
-
-    Route::get('settings/profile', Profile::class)->name('settings.profile');
-    Route::get('settings/password', Password::class)->name('settings.password');
-    Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
-});
-
-require __DIR__.'/auth.php';
+Route::get('/study', function () {
+    return view('study.study-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
+})->name('study-nl');

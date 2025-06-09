@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Cormorant';
+    src: url(../fonts/Cormorant-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url(../fonts/Montserrat-Light.ttf) format('truetype');
+    font-style: normal;
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hideOpacity{
+    opacity: 0;
+}
+
+.hideDisplay{
+    display: none;
+}
+
+body{
+    font-family: var(--montserrat-light-font);
+    font-size: 16px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+:root{
+    --cormorant-font: Cormorant;
+    --montserrat-light-font: Montserrat-Light;
+    --montserrat-semi-bold-font: Montserrat-SemiBold;
+    --black: #292D32;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.logo *{
+    font-family: var(--cormorant-font);
+    font-weight: lighter;
+    color: var(--black);
+}
+
+.logo{
+    text-align: center;
+}
+
+.logo h1{
+    font-size: 30px;
+}
+
+.logo p{
+    font-size: 18px;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #E3E3E3;
+    height: 60px;
+}
+
+.nav a{
+    text-transform: uppercase;
+    margin-right: 40px;
+    font-size: 16px;
+    font-family: var(--cormorant-font);
+    font-weight: lighter;
+}
