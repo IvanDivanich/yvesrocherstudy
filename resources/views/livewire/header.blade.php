@@ -7,9 +7,9 @@
                     <h1>YVES ROCHER</h1>
                     <p>STUDY</p>
                 </div>
-                <div class="profile-icon hideOpacity">
+                <a href="/profile" class="profile-icon">
                     <img src="{{ asset('icons/profile-icon.png') }}" alt="profile">
-                </div>
+                </a>
             </div>
         </div>
         <nav class="nav">

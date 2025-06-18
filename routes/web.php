@@ -11,3 +11,15 @@ Route::get('/', function () {
 Route::get('/study', function () {
     return view('study.study-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
 })->name('study-nl');
+
+Route::get('/profile', function () {
+    return view('main.profile-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
+})->name('profile-nl');
+
+Route::get('/login', function () {
+    return view('main.login-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
+})->name('login-nl');
+
+Route::get('/register', function () {
+    return view('main.register-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
+})->name('register-nl');
