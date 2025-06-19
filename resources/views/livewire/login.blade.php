@@ -10,7 +10,7 @@
                 </div>
                 <div>
                     <label for="password" class="field-title">Пароль</label>
-                    <input wire:model="password" class="input" type="text" name="password"  required>
+                    <input wire:model="password" class="input" type="password" name="password"  required>
                     @error('password') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 

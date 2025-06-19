@@ -8,10 +8,6 @@ Route::get('/login', function () {
     return view('main.login');
 })->name('login');
 
-Route::get('/register', function () {
-    return view('main.register-nl');
-})->name('register-nl');
-
 Route::get('/', function () {
     return view('main.main-page-nl');
 })->name('main-page-nl');
@@ -28,5 +24,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/test/{testId}', \App\Livewire\TestComponent::class)->name('test.run');
 
+    Route::get('/register', function () {
+        return view('main.register-nl');
+    })->name('register-nl');
 });
 
