@@ -16,10 +16,10 @@ return new class extends Migration {
             $table->string('surname');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('phone')->nullable(); // Разрешаем NULL
-            $table->string('post')->nullable();  // Разрешаем NULL
-            $table->date('employmentDate')->nullable(); // Разрешаем NULL
-            $table->date('dateOfBirth')->nullable();    // Разрешаем NULL
+            $table->string('phone')->nullable();
+            $table->string('post')->nullable();
+            $table->date('employmentDate')->nullable();
+            $table->date('dateOfBirth')->nullable();
             $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
             $table->foreignId('shop_id')->constrained('shops')->onDelete('cascade');
             $table->rememberToken();

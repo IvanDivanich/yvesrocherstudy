@@ -1,25 +1,32 @@
 <?php
 
-use App\Livewire\Header; // Добавьте импорт для Livewire компонента Header
-use App\Livewire\MainPage; // Добавьте импорт для Livewire компонента MainPage
+use App\Livewire\Header;
+use App\Livewire\MainPage;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('main.main-page-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
-})->name('main-page-nl');
-
-Route::get('/study', function () {
-    return view('study.study-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
-})->name('study-nl');
-
-Route::get('/profile', function () {
-    return view('main.profile-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
-})->name('profile-nl');
-
 Route::get('/login', function () {
-    return view('main.login-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
-})->name('login-nl');
+    return view('main.login');
+})->name('login');
 
 Route::get('/register', function () {
-    return view('main.register-nl'); // Правильно!  Предполагается, что файл находится в resources/views/main/main-page-nl.blade.php
+    return view('main.register-nl');
 })->name('register-nl');
+
+Route::get('/', function () {
+    return view('main.main-page-nl');
+})->name('main-page-nl');
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/study', function () {
+        return view('study.study-nl');
+    })->name('study-nl');
+
+    Route::get('/profile', function () {
+        return view('main.profile-nl');
+    })->name('profile-nl');
+
+    Route::get('/test/{testId}', \App\Livewire\TestComponent::class)->name('test.run');
+
+});
+

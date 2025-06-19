@@ -15,11 +15,7 @@
         <nav class="nav">
             <a href="/">ГЛАВНАЯ</a>
             <a href="/#hello">о компании</a>
-            <a class="hideDisplay" href="#hello">Работа у нас</a>
             <a href="/study">обучение</a>
-            <a class="hideDisplay" href="#">Стандарты</a>
-            <a class="hideDisplay" href="#">Касса</a>
-            <a class="hideDisplay" href="#">Правила</a>
         </nav>
     </header>
 </div>

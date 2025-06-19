@@ -184,3 +184,54 @@ a{
 .expert .card{
     width: 600px;
 }
+
+.medium-title{
+    font-family: var(--cormorant-font);
+    font-size: 26px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 50px 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.small-title{
+    font-family: var(--montserrat-semi-bold-font);
+    font-size: 20px;
+    text-align: center;
+    margin: 50px 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.desc{
+    font-family: var(--montserrat-light-font);
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+
+.test-button {
+    padding: 0.5rem 1rem; 
+    border-radius: 0;
+    cursor: pointer; 
+    border: none;
+    font-size: 18px; 
+    background-color: transparent;
+    font-family: var(--montserrat-semi-bold-font);
+}
+
+
+
+ .test-button:hover {
+    background-color: #ddd; 
+}
+
+.green-text{
+    color: limegreen;
+}
